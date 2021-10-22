@@ -1,0 +1,13 @@
+html {
+    background-color: antiquewhite;
+    font-family: 'Space Mono', monospace;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.myControls {}
