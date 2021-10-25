@@ -4,29 +4,57 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Quantox</title>
     <link rel="icon" type="image/png" href="/favicon-32x32.png" />
+
 </head>
 
 <body>
     <div class="container">
         <div>
-            <h1>Here is the video</h1>
+            <h1 class="centerClass">Here is the video</h1>
         </div>
-        <div>
-            <video controls>
-                <source src="/AvrilLavigne-Complicated.mp4" type="video/mp4">
-                <source src="/AvrilLavigne-Complicated.mp4" type="video/webm">
-                <p>Your browser doesn't support HTML5 video. Here is a <a
-                        href="https://www.youtube.com/watch?v=5NPBIwQyPWE">link to the video</a> instead.</p>
-            </video>
+        <video src="/AvrilLavigne-Complicated.mp4" class="video">
+        </video>
+        <div class="videoControls">
+            <div class="videoProgress">
+                <div class="videoProgressFilled">
+                </div>
+            </div>
+            <div class="innerPlayerControls">
+                <button class="playButton" title="Play"><span class="material-icons">
+                        play_arrow
+                    </span>
+                </button>
+                <button class="mute controlButton">
+                    <div class="slash"></div>
+                    <span class="material-icons">
+                        volume_up
+                    </span>
+                </button>
+                <input type="range" class="volume" min="0" max="1" step="0.01" value='0.3'>
+                <select class="speed speedStyle" id="speed">
+                    <option class="speedStyle" value=".5">0.5</option>
+                    <option class="speedStyle" value=".75">0.75</option>
+                    <option selected class="speedStyle" value="1">Normal</option>
+                    <option class="speedStyle" value="1.5">1.5</option>
+                    <option class="speedStyle" value="2.0">2.0</option>
+                </select>
+                <button class="fullScreen controlButton">
+                    <span class="material-icons">
+                        fullscreen
+                    </span>
+                </button>
+                <div class="time">
+                    <span class="current">0:00</span>
+                    /
+                    <span class="duration">0:00</span>
+                </div>
+            </div>
         </div>
-        <div class="myControls">
-
-        </div>
-        
     </div>
-
+    <script src="script.js"></script>
 </body>
 
 </html>
